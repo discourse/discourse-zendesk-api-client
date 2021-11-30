@@ -4,22 +4,22 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'zendesk_api/version'
 
 Gem::Specification.new do |s|
-  s.name        = "zendesk_api"
+  s.name        = "discourse_zendesk_api"
   s.version     = ZendeskAPI::VERSION
-  s.authors     = ["Steven Davidovitz", "Michael Grosser"]
-  s.email       = ["support@zendesk.com"]
+  s.authors     = ["Discourse"]
+  s.email       = ["isaac.janzen@discourse.org", "sam.saffron@discourse.org", "robin.ward@discourse.org", "team@discourse.org"]
   s.homepage    = "https://developer.zendesk.com"
-  s.summary     = 'Zendesk REST API Client'
+  s.summary     = "Discourse Zendesk REST API Client"
   s.description = 'Ruby wrapper for the REST API at https://www.zendesk.com. Documentation at https://developer.zendesk.com.'
   s.license     = 'Apache-2.0'
 
-  s.metadata = {
-    'bug_tracker_uri' => 'https://github.com/zendesk/zendesk_api_client_rb/issues',
-    'changelog_uri' => "https://github.com/zendesk/zendesk_api_client_rb/blob/v#{s.version}/CHANGELOG.md",
-    'documentation_uri' => "https://www.rubydoc.info/gems/zendesk_api/#{s.version}",
-    'source_code_uri' => "https://github.com/zendesk/zendesk_api_client_rb/tree/v#{s.version}",
-    'wiki_uri' => 'https://github.com/zendesk/zendesk_api_client_rb/wiki'
-  }
+  # s.metadata = {
+  #   'bug_tracker_uri' => 'https://github.com/zendesk/zendesk_api_client_rb/issues',
+  #   'changelog_uri' => "https://github.com/zendesk/zendesk_api_client_rb/blob/v#{s.version}/CHANGELOG.md",
+  #   'documentation_uri' => "https://www.rubydoc.info/gems/zendesk_api/#{s.version}",
+  #   'source_code_uri' => "https://github.com/zendesk/zendesk_api_client_rb/tree/v#{s.version}",
+  #   'wiki_uri' => 'https://github.com/zendesk/zendesk_api_client_rb/wiki'
+  # }
 
   s.files = Dir.glob('{lib,util}/**/*') << 'LICENSE'
 
