@@ -22,10 +22,11 @@ if defined?(RSpec)
     t.pattern = "spec/core/**/*_spec.rb"
   end
 
-  desc "Run live specs"
-  RSpec::Core::RakeTask.new("spec:live") do |t|
-    t.pattern = "spec/live/**/*_spec.rb"
-  end
+  # skip live specs because we don't have a zendesk instance to test against
+  # desc "Run live specs"
+  # RSpec::Core::RakeTask.new("spec:live") do |t|
+  #   t.pattern = "spec/live/**/*_spec.rb"
+  # end
 
   task :clean_live do
     sh "rm -rf spec/fixtures/cassettes"
