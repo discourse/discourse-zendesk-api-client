@@ -1,7 +1,15 @@
 require 'rake/testtask'
-require 'bundler/gem_tasks'
+require 'bundler'
 require 'bump/tasks'
 require 'rubocop/rake_task'
+
+begin
+  Bundler::GemHelper.install_tasks
+rescue Bundler::BundlerError => error
+  $stderr.puts error.message
+  $stderr.puts "Run `bundle install` to install missing gems"
+  exit error.status_code
+end
 
 begin
   require 'rspec/core/rake_task'
