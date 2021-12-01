@@ -30,7 +30,7 @@ jobs:
           bundler-cache: true
 
       - name: RSpec
-        run: bundle exec rspec --exclude-pattern "spec/live/**/*_spec.rb"
+        run: bundle exec rspec
 
   publish:
     if: contains(github.ref, 'refs/tags/v')
